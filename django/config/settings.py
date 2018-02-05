@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 # webtoon.apps.WebtoonConfig
 INSTALLED_APPS = [
+    'foreignkey',
     'document',
     'django.contrib.admin',
     'django.contrib.auth',
