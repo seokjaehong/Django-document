@@ -28,6 +28,9 @@ class TwitterUser(models.Model):
 
     def __str__(self):
         return self.name
+    class Meta:
+        verbose_name_plural = 'symmetrical_intermediate-TwitterUser'
+
 
 
 
@@ -157,4 +160,7 @@ class Relation(models.Model):
         unique_together=(
             ('from_user','to_user')
         )
+        verbose_name_plural = 'symmetrical_imtermediate-Relation'
+
+
 

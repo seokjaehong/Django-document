@@ -8,7 +8,11 @@ from .models import (
     #intermediate
     Post,User,PostLike,
     #self
-    FacebookUser,TwitterUser,Relation,InstagramUser,
+    FacebookUser,
+    #symmetrical_intermediate
+    TwitterUser,Relation,
+    #symmetrical
+    InstagramUser,
 
 
 )
