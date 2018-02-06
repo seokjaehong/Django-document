@@ -51,6 +51,12 @@ class TwitterUser(models.Model):
         return following_users
 
     @property
+    def followers(self):
+        pk_list = self.relations_by_to_user.filter(
+            type=Relation.RELATION_TYPE_FOLLOWING).values_list('from_user',flat=True)
+        return TwitterUser.objects.filter(pk__in=pk_list)
+
+    @property
     def Block_users(self):
         """
         내가 block하고 있는 user목록을 가져옴
@@ -62,6 +68,25 @@ class TwitterUser(models.Model):
         block_pk_list = block_relation.values_list('to_user',flat=True)
         block_users = TwitterUser.objects.filter(pk__in=block_pk_list)
         return block_users
+
+    def is_followee(self,to_user):
+        """
+        내가 to_user를 follow하고 있는지 여부를 True/False
+        :param to_user:
+        :return:
+        """
+        return self.following.filter(pk=to_user.pk).exists()
+
+
+
+    def is_follow(self,from_user):
+        """
+        from_user가 나를 follow하고 있는지 여부를 True/False
+
+        :param to_user:
+        :return:
+        """
+        return self.followers.filter(pk=from_user.pk).exists()
 
 
     def follow(self, to_user):
