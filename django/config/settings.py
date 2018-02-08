@@ -31,9 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 # webtoon.apps.WebtoonConfig
 INSTALLED_APPS = [
-    'one_to_one',
-    'many_to_many',
-    'foreignkey',
+    'relations.one_to_one.apps.OneToOneConfig',
+    'relations.many_to_many.apps.ManyToManyConfig',
+    'relations.foreignkey.apps.ForeignkeyConfig',
     'document',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'inheritance.abstract_base_classes',
+    'inheritance.rel.apps.Relconfig',
 
 ]
 
