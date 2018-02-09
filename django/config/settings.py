@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'inheritance.abstract_base_classes',
     'inheritance.rel',
     'inheritance.multi_table',
-    'inheritance.proxy',
+   'inheritance.proxy',
+    'inheritance.custom_manager',
 
 ]
 
