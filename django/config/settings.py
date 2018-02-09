@@ -41,10 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'django_extensions',
     'inheritance.abstract_base_classes',
     'inheritance.rel',
     'inheritance.multi_table',
+    'inheritance.proxy', 
 
 ]
 
