@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'inheritance.abstract_base_classes',
-    'inheritance.rel.apps.Relconfig',
+    'inheritance.rel',
+    'inheritance.multi_table',
 
 ]
 
