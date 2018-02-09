@@ -29,3 +29,18 @@ class ChildA(AbstractBase):
 
 class ChildB(AbstractBase):
     default_manager = OtherManger()
+
+
+class ExtraManagerModel(models.Model):
+    extra_manager = OtherManger()
+
+    class Meta:
+        abstract = True
+
+
+class ChildC(AbstractBase, ExtraManagerModel):
+    pass
+
+
+class ChildD(ExtraManagerModel):
+    pass
