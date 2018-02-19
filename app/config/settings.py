@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'inheritance.proxy',
     'inheritance.proxy_manager',
     'inheritance.custom_manager',
-    'inheritance.multiple_inheritance'
+    'inheritance.multiple_inheritance',
+    'weblog',
 
 ]
 
